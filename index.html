@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 <title>Host-its.tk</title>
 <meta content="Host-Its.tk" property="og:title" />
-<meta content="Easy & Fast cheap dedicated IPHM Enabled servers" property="og:description" />
+<meta content="Easy & Fast cheap dedicated IPHM Enabled servers in UAE" property="og:description" />
 <meta content="#43B581" data-react-helmet="true" name="theme-color" />
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;900&display=swap" rel="stylesheet">
@@ -62,15 +62,15 @@
             }
 
             #accept-button {
-                background-color: rgb(132, 94, 194);
+                background-color: rgb(15, 219, 175);
 
                 color: white;
             }
 
             #decline-button {
-                color: rgb(132, 94, 194);
+                color: rgb(219, 22, 15);
 
-                border: 2px solid rgb(132, 94, 194);
+                border: 2px solid rgb(0, 0, 0);
             }
 
             p.overlay-description {
@@ -155,10 +155,12 @@
 <body>
 <div id="overlay" class="overlay">
 <div class="overlay-body">
-<p class="overlay-title">Cookies & Logging</p>
-<p class="overlay-description">This website uses cookies to offer you the most relevant information and
-better understand how you use this website. Please accept cookies for
-optimal performance.</p>
+<p class="overlay-title">⚠️قبول ملفات تعريف الارتباط العاهرة</p>
+<p class="overlay-description">
+يستخدم هذا الموقع ملفات تعريف الارتباط لتزويدك بالمعلومات الأكثر صلة وفهم كيفية استخدامك لهذا الموقع بشكل أفضل. الرجاء قبول ملفات تعريف الارتباط لتحقيق الأداء الأمثل.
+
+يستخدم موقعنا الإلكتروني تسجيل الدخول وملفات تعريف الارتباط لأماننا وأدائنا ، ويتم تسجيل هذا الطلب.
+</p>
 <p class="overlay-description">Our website uses logging & cookies for our security and perfomance <b>THIS REQUEST IS BEING LOGGED</b>.</p>
 <div class="overlay-buttons-wrapper">
 <div id="accept-button" class="overlay-button">Accept</div>
@@ -203,5 +205,36 @@ optimal performance.</p>
             declineButton.addEventListener("click", buttonClick);
             video.addEventListener("click", videoClick);
         </script>
+<script language=JavaScript>
+
+var message="ERROR";
+
+function clickIE4(){
+if (event.button==2){
+alert(message);
+return false;
+ }
+}
+
+function clickNS4(e){
+if (document.layers||document.getElementById&&!document.all){
+if (e.which==2||e.which==3){
+alert(message);
+return false;
+}
+}
+}
+
+if (document.layers){
+document.captureEvents(Event.MOUSEDOWN);
+document.onmousedown=clickNS4;
+}
+else if (document.all&&!document.getElementById){
+document.onmousedown=clickIE4;
+}
+
+document.oncontextmenu=new Function("alert(message);return false")
+
+</script>
 </body>
 </html>
